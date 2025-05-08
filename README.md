@@ -46,83 +46,67 @@ Students, Teachers, Librarians, Aspirants, Bookworms, Narrators, Directors, and 
 ---
 
 ## Model Classes
-```java
-1.User{
 
-    int userId;
-    String name;
-    String email;
-    long contact;
-    LocalDate dateOfBirth;
-    String address;
-    String password;
-    String confirmPassword;
-}
+### 🔹 User
+- int userId  
+- String name  
+- String email  
+- long contact  
+- LocalDate dateOfBirth  
+- String address  
+- String password  
+- String confirmPassword  
 
-2.Librarian{
+### 🔹 Librarian
+- int librarianId  
+- String name  
+- String email  
+- long contact  
+- LocalDate dateOfBirth  
+- String address  
+- String password  
+- String confirmPassword  
 
-     int librarianId;
-     String name;
-     String email;
-     long contact;
-     LocalDate dateOfBirth;
-     String address;
-     String password;
-     String confirmPassword;  
-}
+### 🔹 Book
+- int bookId  
+- String name  
+- String author  
+- String isbn  
+- int quantity  
+- double price  
+- String genre  
+- int publishedYear  
+- int volume  
+- boolean isAvailable  
+- double rating  
 
-3.Book{
+### 🔹 Feedback
+- int feedbackId  
+- int userId  
+- int bookId  
+- String comments  
+- int rating  
 
-     int bookId;
-     String name;
-     String author;
-     String isbn;
-     int quantity;
-     double price;
-     String genre;
-     int publishedYear;
-     int volume;
-     boolean isAvailable;
-     double rating;  
-}
+### 🔹 Transaction
+- int transactionId  
+- String paymentMethod // GPay, PhonePe, etc.  
+- int userId  
+- int bookId  
+- LocalDate borrowedDate  
+- LocalDate returnDate  
+- boolean isReturned  
+- double fine  
 
-4.Feedback{
+### 🔹 Notification
+- int notificationId  
+- String message  
+- LocalDate timestamp  
 
-     int feedbackId;
-     int userId;
-     int bookId;
-     String comments;
-     int rating;
-}
+### 🔹 Storage
+- int shelfNumber  
+- int capacity  
+- int usedSpace  
 
-5.Transaction{
-
-     int transactionId;
-     String paymentMethod; // GPay, PhonePe, etc.
-     int userId;
-     int bookId;
-     LocalDate borrowedDate;
-     LocalDate returnDate;
-     boolean isReturned;
-     double fine;
-}
-
-6.Notification{
-
-     int notificationId;
-     String message;
-     LocalDate timestamp;
-}
-
-7.Storage{
-
-     int shelfNumber;
-     int capacity;
-     int usedSpace;
-}
-
-8.Wishlist{
-
-    int userId;
-    List<Book> wishlistItems;
-}
+### 🔹 Wishlist
+- int userId  
+- List<Book> wishlistItems  
